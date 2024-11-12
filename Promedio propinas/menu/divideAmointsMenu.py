@@ -6,9 +6,9 @@ def desing():
         =============================================
             Dividir Cuenta entre Varias Personas
         =============================================""")
-        total = float(input("Ingrese el monto total de la cuenta: $____"))
-        porcentaje = int(input("Ingrese el porcentaje de propina (por ejemplo: 15): ___ %"))
-        persona =  int(input("Ingrese el número de personas: __"))
+        total = float(input("        Ingrese el monto total de la cuenta: $____"))
+        porcentaje = int(input("        Ingrese el porcentaje de propina (por ejemplo: 15): ___ %"))
+        persona =  int(input("        Ingrese el número de personas: __"))
 
         propina = calcular_propina(total, porcentaje)
         totalMasPropina = calcular_total_con_propina(total,propina)
@@ -16,7 +16,7 @@ def desing():
         =============================================
         La propina calculada es: ${propina}
         El total a pagar es: $___{totalMasPropina}
-        Monto por persona: $___{dividir_total_personas(total,persona)}
+        Monto por persona: $___{(propina/persona) + dividir_total_personas(total,persona)}
         =============================================
 
     """)
