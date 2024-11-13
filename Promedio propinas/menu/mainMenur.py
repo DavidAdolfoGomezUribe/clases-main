@@ -1,4 +1,4 @@
-def desing0():
+def desing():
     print(f"""
     =============================================
                 SIMULADOR DE PROPINA

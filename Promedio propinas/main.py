@@ -1,24 +1,23 @@
 import sys
 
 
-from menu.mainMenur import desing0 as desingOption1
-from menu.tipMenu import desing 
+from menu.mainMenur import desing as desingOption0
+from menu.tipMenu import desing as desingOption1
 from menu.divideAmointsMenu import desing as desingOption2
 
 while True:
-    
-    
-    match desingOption1() :
-    
+    awser = desingOption0()
+    match awser:
         case 1:
-            desing()
+           desingOption1()
+           
         case 2:
-            desing()    
+           desingOption2()    
         case 3 :
-            print("""        
-        =============================================
-        ¡Gracias por usar el Simulador de Propina!
-        =============================================
-                """)
-            sys.exit()
+          print("""        
+      =============================================
+      ¡Gracias por usar el Simulador de Propina!
+      =============================================
+              """)
+          sys.exit()
         

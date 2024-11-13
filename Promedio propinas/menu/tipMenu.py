@@ -42,6 +42,3 @@ def desing():
         except KeyboardInterrupt:
             print("\nInterrupción detectada. Terminando ejecución.")
             break  # Esto terminará el ciclo mientras
-
-# Llamar la función desing() para ejecutar el código
-desing()
