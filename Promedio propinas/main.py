@@ -1,18 +1,24 @@
 import sys
 
 
-from menu.mainMenu import desing
-from menu.calculateTipMenu import desing as desingOption1
+from menu.mainMenur import desing0 as desingOption1
+from menu.tipMenu import desing 
 from menu.divideAmointsMenu import desing as desingOption2
 
 while True:
-    option = desingOption1()
-    if option == 1:
-        desing()
-    elif option == 2:
-        desingOption2()    
-    elif option == 3:
-        print("        Gracias por usar el programa")
-        sys.exit()
-    else :
-        sys.exit()
+    
+    
+    match desingOption1() :
+    
+        case 1:
+            desing()
+        case 2:
+            desing()    
+        case 3 :
+            print("""        
+        =============================================
+        ¡Gracias por usar el Simulador de Propina!
+        =============================================
+                """)
+            sys.exit()
+        
