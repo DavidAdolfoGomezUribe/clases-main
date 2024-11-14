@@ -8,18 +8,19 @@ porcentaje = int(input("porcentaje_:"))
 total = int(input("total_:"))
 id_manual = 3
 
+
 # Hacer la solicitud put
 headers = {"Content-Type": "application/json"}
 data ={
       "id": id_manual,
     "monto": monto,
     "porcentaje" : porcentaje,
-     "total" : total }
+     "total" : total 
+    }
 
-url =  f'https://6734e08c5995834c8a9133af.mockapi.io/propina/'
+url =  f'https://6734e08c5995834c8a9133af.mockapi.io/propina/{id_manual}'
 
-response = requests.post(url , headers=headers,json=data)
-
+response = requests.put(url , headers=headers,json=data)
 
 print(response)
 # Comprobar el estado de la respuesta
@@ -27,6 +28,28 @@ if response.status_code == 200 or response.status_code == 201 :
     print('Recurso actualizado  con éxito')
 else:
     print(f'Error al actualizar el recurso: {response.status_code}')
+
+
+
+# Hacer la solicitud put
+#headers = {"Content-Type": "application/json"}
+#data ={
+#      "id": id_manual,
+#    "monto": monto,
+#    "porcentaje" : porcentaje,
+#     "total" : total }
+
+#url =  f'https://6734e08c5995834c8a9133af.mockapi.io/propina/{id_manual}'
+
+#response = requests.put(url , headers=headers,json=data)
+
+
+#print(response)
+## Comprobar el estado de la respuesta
+#if response.status_code == 200 or response.status_code == 201 :
+#    print('Recurso actualizado  con éxito')
+#else:
+#    print(f'Error al actualizar el recurso: {response.status_code}')
 
 
 
@@ -76,6 +99,7 @@ else:
 #print(json.dumps(response.json(), indent=4))
 
 #response = requests.get("https://jsonplaceholder.typicode.com/photos")
+
 #solicitar datos
 #data=response.json()
 #for i in range(1, len(data)):
